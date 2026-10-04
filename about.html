@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <style>
+      body {
+        background-color: black;
+        font-size: 16px;
+        color: white;
+      }
+      /* Default */
+      button {
+        padding: 5px 10px;
+        margin: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        border: 2px solid white;
+        transition:
+          background-color 0.2s,
+          color 0.2s; /* Smooth transition effect */
+      }
+
+      /* Hover */
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Get current date info
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth() + 1; // Months are 0-11
+        const currentDate = now.getDate();
+
+        // 2. Calculate Age (Born Sept 13, 2013)
+        let age = currentYear - 2013;
+        // If we haven't reached Sept 13 yet this year, subtract 1
+        if (currentMonth < 9 || (currentMonth === 9 && currentDate < 13)) {
+          age--;
+        }
+        document.getElementById("age").textContent = age;
+
+        // 3. Calculate Grade (Was in 7th grade for the 2026-2027 school year starting Aug 12, 2026)
+        // Base grade alignment: in 2026 before Aug 12 -> 6th grade; after Aug 12 -> 7th grade
+        let grade = currentYear - 2019;
+        // If we haven't reached Aug 12 yet this year, subtract 1
+        if (currentMonth < 8 || (currentMonth === 8 && currentDate < 12)) {
+          grade--;
+        }
+        document.getElementById("grade").textContent = grade;
+      });
+    </script>
+  </head>
+  <body>
+    <h1>About Me</h1>
+    <hr />
+    <img
+      src="profilepic.jpg"
+      alt="Profile Picture"
+      style="max-width: 20%; max-height: 20%"
+    />
+    <p>
+      Hello, my name is Bhavya Vyas. I am <span id="age">13</span> years of age
+      and go to <span id="grade">7</span> grade. I am a young developer with a
+      passion for technology and innovation. My strenth is my ability to quickly
+      grasp and remember new concepts.
+    </p>
+    <a
+      href="C:/Users/bhavy/OneDrive/Documents/HTML-CSS-JS/JSResume/JSResume.html"
+      ><button>Back</button></a
+    >
+  </body>
+</html>
