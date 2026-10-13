@@ -9,6 +9,10 @@ This shows my:
 - Projects
 - Interests
 - Contact Info
+<br>
+It also has an auto updating date, age, and grade using JavaScript.
+
+
 ## Access
 To access this project, click on the link below.
 <br>
@@ -17,3 +21,5 @@ https://bhavya-vyas-webdev.github.io/Sorry/
 There is nothing weird or hard to understand on the website, so have fun just roaming around!
 ## Extra
 This is my first project with JavaScript in it, so I'm extremely proud of my work.
+<br>
+To see more about how I made it, check out my code in this repository.
